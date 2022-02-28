@@ -1,0 +1,33 @@
+<tr id="userRow <%= article.id %>"><br>
+        <td><%= article.title %></td>
+        <td><%= link_to "show", article ,data: {bs_toggle: 'modal',bs_target:"#showArticleModal", remote: true, },method: :get%></td>
+        <td><%= link_to 'delete', article_path(article), method: :delete, remote: true %></td>
+        <td><%= link_to "Edit", edit_article_path(article),data: {bs_toggle: 'modal',bs_target:"#editarticleModal", remote: true},method: :get%></td>
+        <td><%= article.likes.count %> <%= (article.likes.count) == 1 ? 'Like' : 'Likes'%></td>
+  <td><%#= link_to 'Unlike',   article_path(@articles), method: :delete %></td> 
+  <td><%= link_to 'Like', article_likes_path(@articles),data: {bs_toggle: 'modal',bs_target:"#like_or_unlike", remote: true}, method: :post %></td>
+</tr>
+
+
+
+<div class="modal fade" id="editarticlemodal" tabindex="-1" aria-labelledby="editarticlemodal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editarticlemodal">edit Article</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= form_for :article, method: :patch ,local: false do|form|%>
+          <%= form.label :title%><br>
+          <%= form.text_field :title %><br>
+
+          <%= form.label :description%><br>
+          <%= form.text_field :description%><br>
+
+          <%= form.submit%>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>

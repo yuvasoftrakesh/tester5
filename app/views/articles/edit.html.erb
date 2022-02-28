@@ -1,0 +1,23 @@
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="#editArticleModal">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button
+      </div>
+      <div class="modal-body">
+        <%=form_for @article, :url =>  article_path(@article),local: false ,method: :patch do |form|%>
+          <%= form.label :title%><br>
+          <%= form.text_field :title %><br>
+          <%= form.label :description%><br>
+          <%= form.text_field :description%><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+           <%= form.submit 'update Article' ,class: "btn btn-default btn-primary" %>
+           <%end%>    
+      </div>
+    </div>
+  </div>
+</div>
