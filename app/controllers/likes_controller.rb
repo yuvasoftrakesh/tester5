@@ -1,9 +1,9 @@
 class LikesController < ApplicationController
 
  before_action :find_like, only: [:destroy]
+
  def index
   @likes = Like.all
-  @article = Article.find(params[:id])
  end
 
  def new
@@ -11,7 +11,6 @@ class LikesController < ApplicationController
  end
 
  def create
-  debugger
     @article = Article.first
     @like = @article.likes.create(article_id: @article.id)
     redirect_to root_path

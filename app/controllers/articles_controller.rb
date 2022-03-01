@@ -9,8 +9,9 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
+
   def post_form
-    debugger
+   debugger
     @article = Article.new(title: params[:title], description: params[:description])
        respond_to do |format|
     if @article.save
@@ -22,7 +23,6 @@ class ArticlesController < ApplicationController
    end
 
   def create
-
     @article = Article.new(article_params)
       respond_to do |format|
     if @article.save

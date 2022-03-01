@@ -1,32 +1,15 @@
-<!-- Modal -->
-<div class="modal fade" id="newArticleModal" tabindex="-1" aria-labelledby="newArticleModal" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="newArticleModal">Article</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-        <div class="modal-body">
-          <%= form_with model:@article do |form|%>
-          <%= form.label :title%><br>
-          <%= form.text_field :title %><br>
 
-          <%= form.label :title%><br>
-          <%= form.text_field :title %><br>
-          
-          <%= form.hidden_field:article_id%>
-          
-        <form id='form'>
-          <label for='avatar'>Image:</label>
-          <input type="file" name="avatar">
-        </form>  
+<!-- 
+         #  <%= form_with model:@article do |form|%>
+         #  <%= form.label :title%><br>
+         #  <%= form.text_field :title %><br>
 
-        </div>
-      </form>  
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary"><%= form.submit %>c</button>
-      </div>
-    </div>
-    <%end%>
-  </div>
+         #  <%= form.label :title%><br>
+         #  <%= form.text_field :description %><br>
+          
+         #  <%= form.hidden_field:article_id%>
+         #  <%=form.submit%>
+
+       
+         # <%end%>
+         -->

@@ -1,6 +1,6 @@
 
-<center><%= link_to "New Article", new_article_path(@articles) ,data: {bs_toggle: 'modal',bs_target: "newArticlemodal", remote: true}%><center>
-<h1>Articles</h1>
+<center><%= link_to "New Article", new_article_path(@articles),data: {bs_toggle: 'modal',bs_target:"#newArticleModal", remote: true }%></center>
+<center><h1>Articles</h1></center>
  <table class="table table-boardered">
   <thead>
     <tr>
@@ -23,10 +23,8 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <%= form_with url: '/articles/:article_id/article' ,local: false,  method: :post do |form|%>
-       <%#= form_tag(article_path method: :post) do |form|%>
-       <%#= form_with(url: "article_article_path", method: :post) do |form| %>
-
+        <%= form_with url: '/articles/:article_id/article' ,local: false do |form|%>
+        <%#= form_for(@articles, url: article_article_path)%>
           <%= form.label :title%><br>
           <%= form.text_field :title %><br>
 
