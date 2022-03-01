@@ -21,9 +21,9 @@
         <%= form_for :article, method: :patch ,local: false do|form|%>
           <%= form.label :title%><br>
           <%= form.text_field :title %><br>
-
-          <%= form.label :description%><br>
-          <%= form.text_field :description%><br>
+      
+          <%= form.label :description %>
+          <%= form.rich_text_area :description%>
 
           <%= form.submit%>
         <%end%>

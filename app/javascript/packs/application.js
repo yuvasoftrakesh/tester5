@@ -15,3 +15,6 @@ require("jquery")
 //=require jquery.remortipart
 
 
+
+require("trix")
+require("@rails/actiontext")
