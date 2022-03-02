@@ -25,7 +25,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'remotipart','~>1.2'
-
+gem 'devise'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

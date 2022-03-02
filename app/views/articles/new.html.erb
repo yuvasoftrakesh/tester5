@@ -1,15 +1,16 @@
 
-<!-- 
-         #  <%= form_with model:@article do |form|%>
-         #  <%= form.label :title%><br>
-         #  <%= form.text_field :title %><br>
 
-         #  <%= form.label :title%><br>
-         #  <%= form.text_field :description %><br>
+        <%= form_with model:@article do |form|%>
+
+           <%= form.label :title%><br>
+           <%= form.text_field :title %><br>
           
-         #  <%= form.hidden_field:article_id%>
-         #  <%=form.submit%>
+          <%= form.label :description %>
+          <%= form.rich_text_area :description%>
 
+      
+          <%= form.hidden_field: article_id%>
+          <%=form.submit%>
        
-         # <%end%>
-         -->
+        <%end%>
+       

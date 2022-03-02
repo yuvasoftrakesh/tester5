@@ -1,5 +1,8 @@
+<%#if current_user.present?%>
+<center><%= link_to "New Article", new_article_path(@articles),data: {bs_toggle: 'modal',bs_target:"#rkArticleModal", remote: true }%></center>
+<%=link_to "logout",destroy_user_session_path, method: :delete %>
 
-<center><%= link_to "New Article", new_article_path(@articles),data: {bs_toggle: 'modal',bs_target:"#newArticleModal", remote: true }%></center>
+
 <center><h1>Articles</h1></center>
  <table class="table table-boardered">
   <thead>
@@ -15,11 +18,11 @@
   </tbody>
 </table>
 
-<div class="modal fade" id="newArticleModal" tabindex="-1" aria-labelledby="newArticleModal" aria-hidden="true">
+<div class="modal fade" id="rkArticleModal" tabindex="-1" aria-labelledby="rkArticleModal" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="newArticleModal">Create new Article</h5>
+        <h5 class="modal-title" id="rkArticleModal">Create new Article</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">

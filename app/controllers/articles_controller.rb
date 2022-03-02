@@ -11,7 +11,6 @@ class ArticlesController < ApplicationController
 
 
   def post_form
-   debugger
     @article = Article.new(title: params[:title], description: params[:description])
        respond_to do |format|
     if @article.save
