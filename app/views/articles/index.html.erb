@@ -1,6 +1,7 @@
 <%#if current_user.present?%>
 <center><%= link_to "New Article", new_article_path(@articles),data: {bs_toggle: 'modal',bs_target:"#rkArticleModal", remote: true }%></center>
-<%=link_to "logout",destroy_user_session_path, method: :delete %>
+<%=link_to "logout",destroy_user_session_path, method: :delete %><br>
+
 
 
 <center><h1>Articles</h1></center>

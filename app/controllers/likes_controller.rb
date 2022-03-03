@@ -11,6 +11,7 @@ class LikesController < ApplicationController
  end
 
  def create
+    @article = User.find_by(id:current_usermail.id)
     @article = Article.first
     @like = @article.likes.create(article_id: @article.id)
     redirect_to root_path

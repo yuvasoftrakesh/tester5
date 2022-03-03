@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
     @like = Like.where(params[:like_id])
+    @user = User.all
 
   end
 
